@@ -1,0 +1,243 @@
+@import url(./base.css);
+
+.content {
+    max-width: 664px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 96px;
+}
+
+.content__heading {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    color: transparent;
+    background: var(--gradientColor);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.content__desc {
+    color: var(--subTextColor);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-search {
+    max-width:  500px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: var(--bgColor3);
+    border: 1px solid rgba(255, 255, 255 , 0.1);
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-inline: auto;
+    height: 62px;
+}
+
+.form-search__input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 19px;
+    padding-right: 24px;
+    color: var(--textColor);
+}
+
+.form-search__btn {
+    flex-shrink: 0;
+}
+
+.alert-scam {
+    background-color: var(--bgColor2);
+    border-radius: 16px;
+    border: 1px solid #FFFFFF1A;
+    margin-top: 138px;
+}
+
+.alert-scam__header {
+    padding: 16px;
+    border-bottom: 1px solid #FFFFFF1A;
+    text-align: center;
+}
+
+.alert-scam__title title{
+    font-size: 30px;
+    font-weight: 800;
+    color: transparent;
+    background: var(--gradientColor);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.alert-scam__desc {
+    color: var(--subTextColor);
+    margin-top: 8px;
+}
+
+.scammer__list {
+    margin: 50px 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.scammer__item {
+    background-color: var(--bgColor3);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.scammer__name {
+    font-weight: 600;
+}
+
+.scammer__date {
+    color: var(--subTextColor);
+}
+
+.scammer__item:hover::before {
+left: auto;
+right: 0;
+width: 100%;
+}
+
+.scammer__item::before {
+content: "";
+position: absolute;
+left: 0;
+right: auto;
+top: 0;
+height: 100%;
+width: 0;
+background-color: #fff;
+opacity: 0.1;
+z-index: -1;
+transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.warning {
+    margin-top: 60px;
+}
+
+.warning__title {
+    text-align: center;
+}
+
+.warning__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.warning__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.warning__header-icon {
+    width: 24px;
+    height:24px;
+    flex-shrink: 0;
+    margin-bottom: -1px;
+}
+
+.warning__content {
+    margin-left: 32px;
+    color: var(--subTextColor);
+    height: 0;
+    overflow: hidden;
+    transition: ease 0.2s;
+}
+
+.warning__content.active {
+    margin-top: 8px;
+    height: auto;
+}
+
+.warning__item {
+    background-color: var(--bgColor3);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+
+.warning__Title {
+    font-weight: 600;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolated;
+    animation: fadeIn ease 0.25s;
+    z-index: 21;
+  }
+  
+.image-modal__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+  
+.image-modal__content {
+    background-color: var(--bgColor2);
+    border-radius: 16px;
+    backdrop-filter: blur(70px);
+    animation: fadeDown ease 0.25s;
+    display: flex;
+    height: auto;
+    width: auto;
+    max-height: 800px;
+    max-width: 300px;
+}
+  
+.image-modal__img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+  
+.scammer__notfound {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.scammer_emty-img {
+    margin-top: 20px;
+    max-width: 180px;
+    margin-bottom: 10px;
+}
+
+.scammer_empty-title {
+    margin-bottom: 20px;
+    color: var(--subTextColor);
+}

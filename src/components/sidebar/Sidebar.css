@@ -1,0 +1,56 @@
+@import url(../../css/base.css);
+
+.sidebar {
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--bgColor2);
+    border-radius: 12px;
+    padding: 20px;
+    height: calc(100vh - 40px);
+}
+
+.header__logo-custom {
+    width: 42.91px;
+    height: 45.02px;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.header__logo-custom img {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(334deg) brightness(101%) contrast(101%);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    color: var(--subTextColor);
+    transition: linear 0.2s;
+}
+
+.sidebar-link:hover {
+    color: var(--textColor);
+}
+
+.sidebar-link.active {
+    color: var(--textColor);
+}
+
+.sidebar-link-icon {
+    font-size: 18px;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar__link-icon {
+    font-size: 18px;
+    display: inline-block;
+    width: 30px;
+}

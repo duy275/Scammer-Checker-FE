@@ -1,0 +1,49 @@
+.profile-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile-img__img {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.form-change__pencil {
+    position: relative;
+    margin-top: 40px;
+    margin-inline-start: 800px;
+    display: block;
+    z-index: 10;
+}
+
+.form-change {
+    position: relative;
+    z-index: 1;
+}
+.form__group-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-inline:auto;
+    width: 500px;
+}
+
+.form-update-wrapper{
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.form-update-wrapper.active {
+    z-index: -10;
+}
+
+.submit-change {
+    position: relative;
+}

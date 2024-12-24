@@ -1,0 +1,110 @@
+@import url(base.css);
+
+.login {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgColor2);
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 200px;
+    padding: 20px; /* Thêm padding để tạo không gian bên trong */
+    gap: 16px;
+}
+
+.login-heading {
+    font-size: 30px;
+    font-weight: 800;
+    color: transparent;
+    background: var(--gradientColor);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login-form__input {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--bgColor3);
+    border: 1px solid var(--borderColor); /* Thêm viền cho các input */
+    outline: none;
+    color: var(--textColor);
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Thêm hiệu ứng chuyển màu viền khi focus */
+}
+
+.login-form__input:focus {
+    border-color: var(--highlightColor); /* Đổi màu viền khi input đang được focus */
+}
+
+.login-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form__title {
+    font-size: 14px;
+    color: var(--textColor);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--buttonColor);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+button:hover {
+    background-color: var(--buttonHoverColor); /* Đổi màu nền khi hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .login {
+        margin-top: 50px; /* Thêm khoảng cách cho thiết bị di động */
+        padding: 15px;
+    }
+
+    .login-heading {
+        font-size: 24px;
+    }
+
+    .login-form__input {
+        font-size: 14px; /* Giảm kích thước font chữ trên màn hình nhỏ */
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+.register {
+    color: var(--textColor)
+}
+
+.success-message {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+}
+  
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}

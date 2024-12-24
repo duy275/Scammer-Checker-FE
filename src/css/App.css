@@ -1,0 +1,43 @@
+.images-fixed {
+    position: fixed;
+    top: 573px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.image-stars {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.effect-circle-1 {
+    width: 530px;
+    height: 530px;
+    border-radius: 100%;
+    filter: blur(250px);
+    background-color: rgba(27,29,48,1);
+    position: fixed;
+    top: 4px;
+    left: -57px;
+    z-index: -1;
+    opacity: 50%;
+}
+
+.effect-circle-2 {
+    width: 530px;
+    height: 530px;
+    border-radius: 100%;
+    filter: blur(250px);
+    background-color: rgba(27,29,48,1);
+    position: fixed;
+    bottom: 4px;
+    right: -57px;
+    z-index: -1;
+    opacity: 50%;
+}

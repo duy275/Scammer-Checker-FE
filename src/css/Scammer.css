@@ -1,0 +1,26 @@
+.form-search__custom {
+    max-width:  500px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: var(--bgColor3);
+    border: 1px solid rgba(255, 255, 255 , 0.1);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-inline: auto;
+    height: 62px;
+}
+
+.content__custom {
+    max-width: 664px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 50px;
+}
+
+.alert-scam__custom {
+    background-color: var(--bgColor2);
+    border-radius: 16px;
+    border: 1px solid #FFFFFF1A;
+    margin-top: 50px;
+}

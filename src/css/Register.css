@@ -1,0 +1,146 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgColor2);
+    border-radius: 16px;
+    max-width: 800px; 
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 200px;
+    padding: 20px; /* Thêm padding để tạo không gian bên trong */
+    gap: 16px;
+}
+
+.form__heading {
+    font-size: 30px;
+    font-weight: 800;
+    color: transparent;
+    background: var(--gradientColor);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.form__group-wrapp {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.form__titlee {
+    font-size: 14px;
+    color: var(--textColor);
+}
+
+.form__title span{
+    color: var(--redColor);
+}
+.form__textarea,
+.form__input {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--bgColor3);
+    border: 1px solid var(--borderColor); /* Thêm viền cho các input */
+    outline: none;
+    color: var(--textColor);
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Thêm hiệu ứng chuyển màu viền khi focus */
+}
+
+.form__upload-group {
+    width: 128px;
+    height: 114px;
+    border-radius: 8px;
+    background-color: var(--bgColor3);
+    position: relative;
+}
+
+.form__upload-wrap {
+    display: inline-flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form__upload {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form__upload-text {
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+.form__image-preview {
+    width: 128px;
+    height: 114px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.form__preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form__preview-remove {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    top: 4px;
+    right: 4px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--buttonColor);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+@media (max-width: 600px) {
+    .login {
+        margin-top: 50px; /* Thêm khoảng cách cho thiết bị di động */
+        padding: 15px;
+    }
+
+    .login-heading {
+        font-size: 24px;
+    }
+
+    .login-form__input {
+        font-size: 14px; /* Giảm kích thước font chữ trên màn hình nhỏ */
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
