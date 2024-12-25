@@ -14,10 +14,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://scammerchecker.onrender.com/login",
+        {
+          username,
+          password,
+        }
+      );
 
       const token = response.data.token;
       const decodedToken = jwtDecode(token);

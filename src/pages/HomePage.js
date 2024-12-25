@@ -31,7 +31,9 @@ const HomePage = () => {
   useEffect(() => {
     const fecthWarning = async () => {
       try {
-        const response = await fetch("http://localhost:5000/warning");
+        const response = await fetch(
+          "https://scammerchecker.onrender.com/warning"
+        );
         if (!response.ok) {
           throw new Error(`Lỗi khi lấy dữ liệu: ${response.status}`);
         }
@@ -50,7 +52,7 @@ const HomePage = () => {
     const fetchScammer = async () => {
       try {
         const response1 = await fetch(
-          "http://localhost:5000/scammer/todayscammers"
+          "https://scammerchecker.onrender.com/scammer/todayscammers"
         );
         if (!response1.ok) {
           throw new Error(`Lỗi khi lấy dữ liệu: ${response1.status}`);

@@ -30,7 +30,9 @@ const Admin = () => {
 
   const fetchScammer = async () => {
     try {
-      const response1 = await fetch("http://localhost:5000/scammer/confirmed");
+      const response1 = await fetch(
+        "https://scammerchecker.onrender.com/scammer/confirmed"
+      );
       if (!response1.ok) {
         throw new Error(`Lỗi khi lấy dữ liệu: ${response1.status}`);
       }
@@ -98,12 +100,15 @@ const Admin = () => {
 
   const deleteScammer = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/scammer/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://scammerchecker.onrender.com/scammer/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!response.ok) {
         throw new Error(`Xảy ra l��i xóa: ${response.statusText}`);
       }

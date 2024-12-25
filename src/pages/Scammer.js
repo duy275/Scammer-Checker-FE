@@ -18,7 +18,7 @@ const Scammer = () => {
     const fetchScammer = async () => {
       try {
         const response1 = await fetch(
-          "http://localhost:5000/scammer/confirmed"
+          "https://scammerchecker.onrender.com/scammer/confirmed"
         );
         if (!response1.ok) {
           throw new Error(`Lỗi khi lấy dữ liệu: ${response1.status}`);
