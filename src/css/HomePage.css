@@ -161,7 +161,7 @@ transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     color: var(--subTextColor);
     height: 0;
     overflow: hidden;
-    transition: ease 0.2s;
+    transition: ease 0.25s;
 }
 
 .warning__content.active {

@@ -23,7 +23,9 @@ const Warning = () => {
   const [warnings, setWarnings] = useState([]);
 
   const fetchWarnings = async () => {
-    const response = await fetch("http://localhost:5000/reporter");
+    const response = await fetch(
+      "https://scammerchecker.onrender.com/reporter"
+    );
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const data = await response.json();
     setWarnings(data);
@@ -45,7 +47,9 @@ const Warning = () => {
 
   const fetchScammer = async () => {
     try {
-      const response1 = await fetch("http://localhost:5000/scammer");
+      const response1 = await fetch(
+        "https://scammerchecker.onrender.com/scammer"
+      );
       if (!response1.ok) {
         throw new Error(`Lỗi khi lấy dữ liệu: ${response1.status}`);
       }
@@ -80,12 +84,15 @@ const Warning = () => {
 
   const banUser = async (username) => {
     try {
-      const response = await fetch(`http://localhost:5000/ban/${username}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://scammerchecker.onrender.com/ban/${username}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!response.ok) {
         throw new Error(`Đã lỗi: ${response.statusText}`);
       }

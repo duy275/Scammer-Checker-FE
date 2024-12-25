@@ -40,7 +40,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<UserLayout />}>
-          <Route path="/" element={<PrivateRoute element={<HomePage />} />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/scammer" element={<Scammer />} />
+          <Route path="/introduce" element={<Introduce />} />
+        </Route>
+
+        <Route path="/" element={<UserLayout />}>
+          {/* <Route path="/" element={<PrivateRoute element={<HomePage />} />} />
           <Route
             path="/scammer"
             element={<PrivateRoute element={<Scammer />} />}
@@ -48,7 +54,7 @@ function App() {
           <Route
             path="/introduce"
             element={<PrivateRoute element={<Introduce />} />}
-          />
+          /> */}
           <Route
             path="/report"
             element={<PrivateRoute element={<Report />} />}

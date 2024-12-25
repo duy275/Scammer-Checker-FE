@@ -14,10 +14,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://scammerchecker.onrender.com/login",
+        {
+          username,
+          password,
+        }
+      );
 
       const token = response.data.token;
       const decodedToken = jwtDecode(token);
@@ -39,7 +42,7 @@ const Login = () => {
         }
       }, 1000);
     } catch (err) {
-      message.error("Thông tin đăng nhập không chính xác!");
+      message.error("Đăng nhập thất bại!");
     }
   };
 

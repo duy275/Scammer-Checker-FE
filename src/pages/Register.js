@@ -26,15 +26,19 @@ const Register = () => {
 
     try {
       // Gửi thông tin đăng ký tới API backend
-      const response = await axios.post("http://localhost:5000/register", {
-        name,
-        phonenumber,
-        username,
-        password,
-        email,
-      });
+      const response = await axios.post(
+        "https://scammerchecker.onrender.com/register",
+        {
+          name,
+          phonenumber,
+          username,
+          password,
+          email,
+        }
+      );
 
       // Nếu đăng ký thành công, chuyển hướng đến trang đăng nhập
+      message.success("Đăng ký tài khoản thành công!");
       navigate("/login");
     } catch (err) {
       if (err.response && err.response.data && err.response.data.message) {

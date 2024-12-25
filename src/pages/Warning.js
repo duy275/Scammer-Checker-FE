@@ -28,7 +28,7 @@ const Warning = () => {
   const navigate = useNavigate(); // Khởi tạo useNavigate
 
   const fetchWarnings = async () => {
-    const response = await fetch("http://localhost:5000/warning");
+    const response = await fetch("https://scammerchecker.onrender.com/warning");
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const data = await response.json();
     setWarnings(data);
@@ -64,13 +64,16 @@ const Warning = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/warning/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "https://scammerchecker.onrender.com/warning/create",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     message.success("Thêm cảnh báo thành công!");
     fetchWarnings();
@@ -94,9 +97,12 @@ const Warning = () => {
   };
 
   const handleDeleteWarning = async (id) => {
-    const response = await fetch(`http://localhost:5000/warning/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `https://scammerchecker.onrender.com/warning/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
 
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     message.success("Xóa cảnh báo thành công!");

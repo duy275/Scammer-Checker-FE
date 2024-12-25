@@ -106,13 +106,16 @@ const Report = () => {
         reporter_id: reporter_id,
       };
 
-      const response = await fetch("http://localhost:5000/scammer/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formPayload),
-      });
+      const response = await fetch(
+        "https://scammerchecker.onrender.com/scammer/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formPayload),
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();

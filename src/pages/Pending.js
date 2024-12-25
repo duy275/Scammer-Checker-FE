@@ -44,12 +44,15 @@ const Admin = () => {
   const deleteScammer = async (id) => {
     console.log(id);
     try {
-      const response = await fetch(`http://localhost:5000/scammer/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://scammerchecker.onrender.com/scammer/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!response.ok) {
         throw new Error(`Xảy ra l��i xóa: ${response.statusText}`);
       }
@@ -82,7 +85,7 @@ const Admin = () => {
   const fetchScammer = async () => {
     try {
       const response1 = await fetch(
-        "http://localhost:5000/scammer/unconfirmed"
+        "https://scammerchecker.onrender.com/scammer/unconfirmed"
       );
       if (!response1.ok) {
         throw new Error(`Lỗi khi lấy dữ liệu: ${response1.status}`);
@@ -129,7 +132,7 @@ const Admin = () => {
   const confirmScammer = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/scammer/confirm/${id}`,
+        `https://scammerchecker.onrender.com/scammer/confirm/${id}`,
         {
           method: "PUT",
           headers: {
@@ -153,7 +156,7 @@ const Admin = () => {
   const rejectScammer = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/scammer/reject/${id}`,
+        `https://scammerchecker.onrender.com/scammer/reject/${id}`,
         {
           method: "PUT",
           headers: {
@@ -176,12 +179,15 @@ const Admin = () => {
 
   const banUser = async (username) => {
     try {
-      const response = await fetch(`http://localhost:5000/ban/${username}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://scammerchecker.onrender.com/ban/${username}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Đã lỗi: ${response.statusText}`);

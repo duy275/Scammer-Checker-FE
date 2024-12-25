@@ -10,6 +10,8 @@ import { useRef } from "react";
 import "./WebHeader.css";
 
 const WebHeader = () => {
+  const token = localStorage.getItem("token");
+
   const [scrollY, setScrollY] = useState(0);
   const warningRef = useRef(null);
   useEffect(() => {
@@ -90,15 +92,23 @@ const WebHeader = () => {
           </NavLink>
           <div className="login__container">
             <img src={Reporter} className="avatar" onClick={toggleLogin}></img>
-            <div className={`login-list ${showLogin ? "active" : ""}`}>
-              <NavLink to="/profile" className="login-item">
-                Thông tin tài khoản
-              </NavLink>
-              <div className="login-item" onClick={handleLogout}>
-                Đăng xuất
-                <img src={logout} alt="logout" className="logout-img" />
+            {token ? (
+              <div className={`login-list ${showLogin ? "active" : ""}`}>
+                <NavLink to="/profile" className="login-item">
+                  Thông tin tài khoản
+                </NavLink>
+                <div className="login-item" onClick={handleLogout}>
+                  Đăng xuất
+                  <img src={logout} alt="logout" className="logout-img" />
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className={`login-list ${showLogin ? "active" : ""}`}>
+                <NavLink to="/login" className="login-item">
+                  Đăng nhập
+                </NavLink>
+              </div>
+            )}
           </div>
         </div>
       </header>
